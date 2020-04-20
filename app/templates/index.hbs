@@ -7,11 +7,15 @@
 
     <div class="form-horizontal form-group form-group-lg row">
     <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
-      <input type="email" class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"/>
+      {{input type="email" value=email class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
     </div>
     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-4 col-md-3">
-        <button class="btn btn-primary btn-lg btn-block">Sign Up!</button>
+        <button disabled={{isDisabled}} {{action 'saveEmail'}} class="btn btn-primary btn-lg btn-block">Sign Up!</button>
     </div>
+
+    {{#if responseMessage}}
+        <div class="alter alter-success">{{responseMessage}}</div>
+    {{/if}}
   </div>
   <br>
 </div>

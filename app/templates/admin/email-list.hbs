@@ -1,0 +1,21 @@
+
+
+<h1>Email List</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each model as |email|}}
+        <tr>
+            <th>{{email.id}}</th>
+            <td>{{email.email}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
